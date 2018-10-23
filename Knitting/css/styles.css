@@ -1,0 +1,819 @@
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+h1 {
+    font-family: 'Merienda', cursive;
+}
+
+p {
+    font-family: 'Arimo', sans-serif;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero
+* * * * * * * * * * * * * * * * * * * * */
+
+.hero {
+    height: 800px;
+    background:
+            linear-gradient(rgba(110, 156, 156, 0.3),
+            rgba(0,0,0,0.0)),
+            url('../img/hero.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*****logo*****/
+
+.hero-nav .logo-container {
+    display: inline-block;
+    transform: rotate(360deg);
+    transition: 1s transform;
+    position: absolute;
+    left: 84px;
+    width: 32px;
+}
+
+.logo-container:hover {
+    transform: rotate(0deg);
+}
+
+
+/*****nav*****/
+
+.hero-nav  nav {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+}
+
+.hero-nav  a {
+    padding: 15px;
+    height: 66px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: .7em;
+    font-weight: bolder;
+    transition: 1s;
+}
+
+.hero-nav  a:hover {
+    text-decoration: underline;
+}
+
+.hero-nav  li {
+        display: inline-block;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Menu bar
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.menu {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: .2s;
+    transition-delay: .1s;
+    background: rgba(110, 156, 156, 0.9);
+    z-index: 1000;
+}
+
+.mobilenav a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+.mobilenav ul {
+    padding-top: 10px;
+}
+
+.mobilenav li {
+	display: inline-block;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    width: 95%;
+}
+
+.open {
+    top:0px;
+    margin: 0px;
+    opacity: 1;
+}
+
+.close {
+    top:-100vh;
+    left: 0px;
+    border: none;
+    opacity: 0;
+}
+
+.hamburger-container button {
+    border: none;
+    background: none;
+}
+
+
+
+/*****Hero- Title*****/
+
+.hero-content {
+    width: 70%;
+    max-width: 800px;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    display: block;
+    margin-top: 100px;
+    margin: 100px auto 0;
+}
+
+.hero-content h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+    border: 6px solid white;
+    padding: 20px;
+    background: rgba(110, 156, 156, 0.3);
+}
+
+.hero-content p {
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    font-size: 2em;
+    text-shadow:5px 5px 5px #444;
+}
+
+.hero-content .call-to-action {
+    font-family: 'Merienda', cursive;
+    font-size: 1em;
+    text-align: center;
+    color: #fff;
+    background: rgba(110, 156, 156, 0.3);
+    display: inline-block;
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 15px;
+    font-weight: bolder;
+    transition: 1s;
+}
+
+.call-to-action:hover {
+    background: rgba(110, 156, 156, 1);
+}
+
+@media (max-width: 899px) {
+    .hero {
+        height: 500px;
+    }
+    .hero .hero-content {
+        width: 95%;
+        max-width: 575px;
+        margin-top: 70px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.7em;
+    }
+    .hero .call-to-action {
+        font-size: .8em;
+    }
+    .hero-nav nav {
+        display: inline-block;
+        position: absolute;
+        left: 80px;
+        right: unset;
+    }
+    .hero-nav .logo-container {
+        display: inline-block;
+        position: absolute;
+        right: 84px;
+        left: unset;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        height: 400px;
+    }
+    .hero .hero-content {
+        width: 100%;
+        max-width: 415px;
+        margin-top: 50px;
+    }
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .hero .call-to-action {
+        font-size: .8em;
+    }
+    .menu {
+        width: 100vw;
+        display: inline-block;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .logo-container {
+        visibility: hidden;
+    }
+    .hamburger-container {
+        margin: 10px 0;
+    }
+    .hero-nav nav {
+        left: unset;
+        display: inline-block;
+        text-align: center;
+        width: 100vw;
+        margin: 0;
+    }
+    .open i {
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Main- home page
+* * * * * * * * * * * * * * * * * * * * */
+
+main {
+    background: linear-gradient(rgba(113, 142,135,1),rgba(253,253,253,1));
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.row {
+    border-top: 5px solid #fff;
+}
+
+.row .info-container {
+    padding: 50px;
+    color: #fff;
+    overflow: auto;
+    font-size: 1.5em;
+}
+
+.info-container h1 {
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+
+.row .card-container {
+    margin: 2%;
+}
+
+.card-container {
+    position: fixed;
+    height: 300px;
+    width: 46%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;;
+    transition: 0.35s;
+}
+
+.card-container .title {
+    font-size: 2em;
+    color: #fff;
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    transition: transform 0.35s;
+    transform: translateY(0px);
+}
+
+.card-container .description {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    bottom: 20px;
+    left: 30px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid white;
+    transition: opacity 0.35s, transform 0.35s;
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.description p {
+    position: absolute;
+    font-size: 1.2em;
+    text-align: center;
+    width: 80%;
+    top: 35%;
+    left:10%;
+    right: 10%;
+}
+
+.card-container:hover .card {
+    opacity: 1;
+    background: rgba(110, 156, 156, .5);
+}
+
+.card-container:hover .description {
+    z-index: 0;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-container:hover .title {
+    transform: translateY(-50px);
+}
+
+
+.hats {
+    background: radial-gradient(rgba(110, 156, 156, .5),rgba(255, 0, 0, 0)), url('../img/hats.jpg');
+
+    background-size: cover;
+}
+
+.mittens {
+    background: radial-gradient(rgba(110, 156, 156, .5),rgba(255, 0, 0, 0)), url('../img/mittens.jpg');
+
+    background-size: cover;
+}
+
+.sweaters {
+    background: radial-gradient(rgba(110, 156, 156, .5),rgba(255, 0, 0, 0)), url('../img/sweaters.jpg');
+
+    background-size: cover;
+}
+
+.kiddos {
+    background: radial-gradient(rgba(110, 156, 156, .5),rgba(255, 0, 0, 0)), url('../img/kiddos.jpg');
+
+    background-size: cover;
+}
+
+
+@media (max-width: 899px) {
+    .info-container h1 {
+        font-size: 1.5em;
+        padding: 10;
+    }
+    .info-container p {
+        font-size: .9em;
+        padding: 10;
+    }
+    .row .card-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 0;
+    }
+    .card-container {
+        width: 90%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .row .info-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .info-container h1 {
+        font-size: 1.3em;
+        padding: 0;
+    }
+    .info-container p {
+        font-size: .8em;
+        padding: 0;
+    }
+    .row .card-container {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 0;
+    }
+    .card-container {
+        width: 94%;
+        height: 200px;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Product Page
+* * * * * * * * * * * * * * * * * * * * */
+
+
+#shop {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/shop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 0px;
+}
+
+#shop-content h1 {
+    background: none;
+}
+
+.shop {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/shop.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    padding-bottom: 150px;
+}
+
+.shop .row {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+About Page
+* * * * * * * * * * * * * * * * * * * * */
+
+
+#about {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 0;
+}
+
+#about-content h1 {
+    background: none;
+}
+
+.about {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    padding-bottom: 150px;
+}
+
+.about .row {
+    background: rgba(110, 156, 156, 0.5);
+    color: #fff;
+    border: 5px solid #fff;
+    padding: 20px;
+    margin: 30px 0px;
+}
+
+.about .center {
+    text-align: center;
+    display: inline-block;
+}
+
+.about h1 {
+    padding: 0 20px;
+}
+
+.about p {
+    padding: 20px;]
+}
+
+.staff-pic-container {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5%;
+    color: #fff;
+}
+
+.staff-pic-container .staff-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.staff-pic-container h3 {
+    font-size: 1.8em;
+    font-family: 'Merienda', cursive;
+}
+
+.staff-pic-container h5 {
+    font-size: 1.3em;
+    font-family: 'Merienda', cursive;
+}
+
+.lamby {
+    background: url("https://images.unsplash.com/photo-1484557985045-edf25e08da73?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1500&amp;h=1126&amp;q=80&amp;cs=tinysrgb&amp;crop=");
+    background-size: 300px;
+    background-position: 50% 100%;
+}
+
+.kate {
+    background: url("https://thechive.files.wordpress.com/2012/10/glamour-shots-22-e1351277921930.jpg?quality=85&strip=info");
+    background-size: 280px;
+    background-repeat: no-repeat;
+    background-position: 70% 30%;
+}
+
+@media (max-width: 899px) {
+    .about h1 {
+        font-size: 1.5em;
+    }
+    .staff-pic-container h3 {
+        font-size: 1.4em;
+    }
+    .staff-pic-container h5 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 500px) {
+    .about h1 {
+        font-size: 1.1em;
+    }
+    .staff-pic-container h3 {
+        font-size: 1.2em;
+    }
+    .staff-pic-container h5 {
+        font-size: 1.1em;
+    }
+    .staff-pic-container {
+        width: 150px;
+    }
+    .staff-pic-container .staff-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .lamby {
+        background-size: 200px;
+        background-repeat: no-repeat;
+    }
+    .kate {
+        background-size: 200px;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Contact Page
+* * * * * * * * * * * * * * * * * * * * */
+
+#contact {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 0px;
+}
+
+#contact-content h1 {
+    background: none;
+}
+
+.contact {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0),
+                rgba(0,0,0,1)),
+                url('../img/contact.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+    padding-bottom: 150px;
+}
+
+.contact .row {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    width: 90%;
+    border-top: 5px solid #fff;
+    border: 5px solid #fff;
+    padding: 20px;
+}
+
+.signup-form input, .signup-form textarea {
+    padding: 10px 20px;
+    background: #f6dacf;
+    border: 2px solid #fff;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    width: 40%;
+}
+
+.signup-form label {
+    margin-left: 20px;
+    font-weight: bold;
+    display: block;
+    margin-left: 50px;
+    text-shadow: #222 1px 1px 1px;
+
+}
+
+.input-container {
+    margin: 60px 0;
+}
+
+.signup-form textarea {
+    width: 90%;
+    height: 200px;
+    resize: none;
+}
+
+.contact button {
+    font-family: 'Merienda', cursive;
+    font-size: 1em;
+    text-align: center;
+    color: #fff;
+    text-shadow: #222 1px 1px 1px;
+    background: rgba(110, 156, 156, 0.6);
+    display: inline-block;
+    border-radius: 25px;
+    border: 2px solid white;
+    padding: 15px;
+    margin-left: 50px;
+    font-weight: bolder;
+    transition: 1s;
+}
+
+.contact button:hover {
+    background: rgba(110, 156, 156, 1);
+}
+
+@media (max-width: 899px) {
+    .contact .row {
+        width: 94%;
+        margin: 0 3%;
+    }
+    .signup-form input {
+        width: 50%;
+    }
+    .signup-form textarea {
+        width: 90%;
+        margin: 0 4%;
+    }
+}
+
+@media (max-width: 500px) {
+    .signup-form input {
+        width: 90%;
+        margin: 10px 4%;
+    }
+    .signup-form textarea {
+        width: 94%;
+        margin: 0 2%;
+    }
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Footer
+* * * * * * * * * * * * * * * * * * * * */
+
+footer {
+    background:
+        linear-gradient(rgba(255,255,255,.99),
+        rgba(0,0,0,.4)),
+        url('../img/hero.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+footer .wrapper {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+footer h5 {
+    color: #444;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Arimo', sans-serif;
+    text-shadow:1px 1px 1px #fff;
+}
+
+footer a {
+    color: #444;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2em;
+    text-shadow:1px 1px 1px #fff;
+}
+
+footer .social-icon {
+    margin: 5px;
+    text-align: center;
+}
+
+footer .stamp {
+    color: #fff;
+    text-align: center;
+    height 100px;
+    font-size: 1em;
+    padding: 10px;
+    text-shadow:5px 5px 5px #444;
+}
+
+@media (max-width: 900px)  {
+    footer span {
+        display: none;
+    }
+
+}

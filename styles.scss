@@ -1,0 +1,1452 @@
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+* {
+  box-sizing: border-box;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin: 10px 0;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, p{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Variables
+* * * * * * * * * * * * * * * * * * * * */
+
+$white: rgba(255,255,255,1);
+$whiteo: rgba(255,255,255,0);
+$lightgrey: rgba(120, 120, 120, 1);
+$black: rgba(0,0,0,1);
+$morningbg: rgba(213,166,136,1);
+$noonbg: rgba(252,222,201,1);
+$oceanbg: rgba(130,189,230,1);
+$eveningbg: rgba(183,132,105,1);
+$nightbg: rgba(41,41,62,1);
+$lightsalmon: rgba(254,231,212,1);
+$darksalmon: rgba(252,222,201,1);
+$darksalmono: rgba(252,222,201,.5);
+$lightorange: rgba(238, 130, 130, .9);
+$lightorangeo: rgba(238, 130, 130, .5);
+$aquablue: rgba(140,202,202,1);
+$lightblue: rgba(168,214,246,1);
+$midblue: rgba(8,91,144,1);
+$midblueo: rgba(8,91,144,.8);
+$darkblue: rgba(16,24,84,1);
+$red: rgba(243,83,102,1);
+$redo: rgba(243,83,102,.5);
+$berry: rgba(160,50,75,1);
+$midgreen: rgba(8,131,144, 1);
+$darkgreen:rgba(10, 98, 107, 1);
+
+
+/*****nav*****/
+
+.hero-nav {
+    display: inline-block;
+    position: absolute;
+    right: 5vw;
+    padding-top: 3%;
+    max-width: 50vw;
+    z-index: 1000;
+    filter: drop-shadow(0vw 0vw 1vw $red);
+    -webkit-filter: drop-shadow(0 0 1vw $red);
+
+
+
+    a {
+        height: 66px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bolder;
+        transition: 0.3s ease;
+        color: $white;
+        text-decoration: none;
+        border-top: 4px transparent $white;
+        border-bottom: 4px transparent $white;
+        padding: 20px 0;
+        margin: 0 15px;
+
+    }
+    a:hover {
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        padding: 6px 0;
+    }
+    li {
+            display: inline-block;
+    }
+
+}
+.about .hero-nav {
+  filter: drop-shadow(0vw 0vw 1vw $oceanbg);
+  -webkit-filter: drop-shadow(0 0 1vw $oceanbg);
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Menu bar
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.menu {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: .2s;
+    transition-delay: .1s;
+    background: $midblueo;
+    z-index: 1000;
+    border-top: none;
+    border-bottom: none;
+
+}
+.about .hero-nav .mobilenav a {
+  color: $white;
+}
+
+.mobilenav {
+    a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: .8em;
+    border-top: none;
+    border-bottom: none;
+    margin: 0;
+    }
+    a:hover {
+        border-top: none;
+        border-bottom: none;
+        padding: 20px;
+    }
+    ul {
+        padding-top: 10px;
+    }
+    li {
+    	display: inline-block;
+        text-align: center;
+        border-bottom: 2px solid #fff;
+        width: 95%;
+    }
+}
+
+
+.open {
+    top:0px;
+    margin: 0px;
+    opacity: 1;
+
+}
+
+.close {
+    top:-100vh;
+    right: 0px;
+    border: none;
+    opacity: 0;
+
+
+}
+
+.hamburger-container button {
+    border: none;
+    background: none;
+    text-shadow: 1px 1px 1px $lightgrey;
+
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero-text
+* * * * * * * * * * * * * * * * * * * * */
+
+
+.hero-content {
+  color: $white;
+  font-size: 1.7em;
+  padding: 3%;
+  width: 50%;
+  position: relative;
+  text-shadow: 2px 2px 2px $lightgrey;
+  font-weight: bold;
+}
+.location {
+  color: $white;
+  font-size: 1.2em;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  position: absolute;
+  bottom: 0;
+  a:visited{
+    color: $lightorange;
+  }
+}
+/* * * * * * * * * * * * * * * * * * * * *
+about-text
+* * * * * * * * * * * * * * * * * * * * */
+
+.about-info{
+  color: $white;
+  filter: drop-shadow(0 0 2vw $darkblue);
+  -webkit-filter: drop-shadow(0 0 2vw $darkblue);
+  width: 100%;
+  padding: 5%;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 10;
+  h3 {
+    font-size: 2em;
+  }
+  span{
+    font: 100% Consolas, Monaco, monospace;
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+
+
+  }
+
+
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.about1 {
+    font: bold 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 2s steps(10, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about2 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 12ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 2.8s steps(13, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about3 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 32ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 8.6s steps(31, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about4 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 17ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 3.2s steps(16, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about4 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 17ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 3.2s steps(16, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about5 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 3ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing .4s steps(2, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about6 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 69ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 13.6s steps(68, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about7 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 19ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 3.6s steps(18, end),
+               blink-caret .5s step-end infinite alternate;
+}
+.about8 {
+    font: 100% Consolas, Monaco, monospace;
+    border-right: .1em solid white;
+    width: 16.5em;
+    width: 50ch;
+    white-space: nowrap;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    overflow: hidden;
+    -webkit-animation: typing 10s steps(49, end),
+               blink-caret .5s step-end infinite alternate;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+contact-text
+* * * * * * * * * * * * * * * * * * * * */
+.contact-page{
+  background: $midblueo;
+}
+.contact div{
+  position: relative;
+}
+
+.contact h1 {
+  color: $white;
+  padding: 1vw;
+  margin-left: 2vw;
+  position: relative;
+  top: -20vh;
+
+}
+.contact-form {
+  background: $lightblue;
+  position: relative;
+  top: 15vh;
+  width: 80vw;
+  height: 80%;
+  margin: 2vw 10vw;
+  border: 2px solid $white;
+
+}
+.form-group {
+  position: relative;
+  top: -15vh;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1vh 2vw;
+    background: $lightorange;
+    border: 2px solid $white;
+    color: $white;
+    font-weight: bold;
+    outline: none;
+    margin-bottom: 1vh;
+    margin-left: 5vw;
+    width: 40vw;
+    display: inline;
+}
+
+.contact-form label {
+    color: $white;
+    font-weight: bold;
+    display: block;
+    margin-left: 5vw;
+    padding: 1vw;
+    position: relative;
+
+
+}
+.contact-form i {
+  padding-right: 5px;
+}
+
+.contact-form textarea {
+    width: 60vw;
+    height: 20vh;
+    resize: none;
+    display: inline;
+}
+.alert{
+    color: $white;
+    padding: 1vw;
+  }
+.text-danger{
+  color: $lightorange;
+  padding: 1vw;
+}
+
+
+@media (max-width: 899px) {
+    .contact .row {
+        width: 94%;
+        margin: 0 3%;
+    }
+    .contact-form input {
+        width: 50%;
+    }
+    .contact-form textarea {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-form input {
+        width: 90%;
+        margin: 10px 4%;
+    }
+    .contact-form textarea {
+        width: 90%;
+        margin: 10px 4%;
+    }
+}
+
+
+
+ // ****************media queries********************
+
+ @media (max-width: 899px) {
+
+     .hero-content {
+         width: 70%;
+         h1 {
+             font-size: 1.5em;
+         }
+         h2 {
+             font-size: 1em;
+         }
+     }
+     .hamburger-container{
+       position: relative;
+       right: 20px;
+     }
+
+       #close-mobile-menu-button{
+         position: relative;
+         left: 10px;
+       }
+       .about-info {
+         width: 100%;
+         h3 {
+           font-size: 1.3em;
+         }
+         span {
+           font-size: .9em;
+         }
+         .about4, .about2, .about3, .about5, .about6, .about7, .about8{
+           top: 3px;
+         }
+       }
+
+ }
+
+ @media (max-width: 500px) {
+
+     .hero-content {
+         width: 100%;
+         text-align: center;
+         h1 {
+             font-size: 1em;
+             margin-top: 70px;
+             margin-left: 10%;
+             margin-right: 10%;
+         }
+         h2 {
+             font-size: .8em;
+             margin-left: 10%;
+             margin-right: 10%;
+         }
+     }
+
+     .location {
+       font-size: .8em;
+     }
+     .fa {
+       font-size: 1.5em;
+       display: inline-block;
+     }
+
+     .menu {
+         width: 100vw;
+         display: inline-block;
+         text-align: center;
+
+     }
+
+     .hamburger-container {
+         margin: 10px 0;
+         width: 100%;
+         text-align: center;
+     }
+     .hero-nav nav {
+         display: inline-block;
+         text-align: center;
+         width: 100vw;
+         margin: 0;
+     }
+     .mobilenav {
+         a {
+         text-align: center;
+         width: 85vw;
+         margin: 0;
+         }
+
+         ul {
+             padding-top: 10px;
+         }
+         li {
+         	display: inline-block;
+             text-align: center;
+             border-bottom: 2px solid #fff;
+             width: 85vw;
+
+         }
+     }
+     .open i {
+         margin: 0;
+         padding: 10px 0;
+     }
+     .about-info {
+       width: 95%;
+       h3 {
+         font-size: 1.2em;
+       }
+       span {
+         font-size: .5em;
+       }
+       .about4, .about2, .about3, .about5, .about6, .about7, .about8{
+         top: 2px;
+       }
+     }
+ }
+// ********************footer***********************
+
+footer {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 2%;
+  padding-right: 5%;
+  li {
+    display: inline-block;
+    padding: 5px;
+  }
+  .social-icon {
+    display: inline-block;
+    padding: 5%;
+  }
+}
+
+
+// **********************PAINTINGS*****************************
+
+
+
+@mixin horizontalcenter(){
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+@mixin verticalcenter(){
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+@mixin centercenter(){
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tree($p_height, $p_color){
+  width: 0;
+  height: 0;
+  margin-top: $p_height;
+  margin-left: $p_height / 4;
+  border-width: 0 $p_height*0.75 $p_height*2.5 $p_height*0.75;
+  border-style: solid;
+  border-color: transparent transparent $p_color transparent;
+  overflow: visible;
+  &:before, &:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent $p_color transparent;
+  }
+  &:before{
+    top: -$p_height*0.85;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.55 $p_height*2 $p_height*0.55;
+  }
+  &:after{
+    top: -$p_height*1.45;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.45 $p_height*1.5 $p_height*0.45;
+  }
+}
+
+@mixin peak($p_width){
+  border-style: solid;
+  border-width: 0 $p_width*0.5 $p_width*0.86 $p_width*0.5;
+  border-color: transparent transparent #007bff transparent;
+}
+@mixin hill($p_width){
+  @include horizontalcenter;
+  border-style: solid;
+  border-width: 0 $p_width*0.5 $p_width*0.86 $p_width*0.5;
+  border-color: transparent transparent #007bff transparent;
+}
+@mixin boat($p_height, $p_color){
+  width: $p_height*12;
+  height: $p_height*5;
+  margin-top: $p_height;
+  margin-left: $p_height / 4;
+  border-width:0 $p_height*.5 $p_height*4 $p_height*.5;
+  border-style: solid;
+  border-radius: $p_height;
+  border-color: transparent transparent $p_color transparent;
+  overflow: visible;
+
+  &:before{
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -$p_height*1.5;
+    border-style: solid;
+    border-color: transparent $p_color transparent transparent;
+    top: -$p_height*7;
+    @include horizontalcenter();
+    border-width: $p_height*5 $p_height*5 $p_height*2 0;
+  }
+  &:after{
+    display: block;
+    width: $p_height;
+    height: $p_height*11;
+    border-style: solid;
+    margin-left: $p_height*6;
+    border-color: transparent $p_color transparent transparent;
+    top: -$p_height*7;
+
+  }
+}
+
+
+div{
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+  }
+}
+
+// **********************mountains*****************
+
+body{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  // background: radial-gradient(ellipse at center, white 0%, $lightsalmon 50%);
+
+  & .sun{
+    top: 8%;
+    @include horizontalcenter();
+    width: 70%;
+    padding-top: 70%;
+    border-radius: 50%;
+    background: $red;
+    // filter: drop-shadow(0 0 3vw $white);
+    // -webkit-filter: drop-shadow(0 0 3vw $white);
+
+
+  }
+
+  &.morning{
+
+    background: $morningbg;
+
+      filter: saturate(0.5) brightness(0.9);
+
+      & .sun{
+        top: 30%;
+        left: -40%;
+        transform: translatey(0);
+      }
+    }
+
+
+  &.noon{
+
+    background: $noonbg;
+    filter: saturate(1) brightness(1);
+  }
+
+  &.evening{
+
+    background: $eveningbg;
+    filter: saturate(0.65) brightness(0.9);
+
+    & .sun{
+      top: 15%;
+      left: 40%;
+      transform: translatey(0);
+    }
+  }
+
+  &.night{
+    background: $nightbg;
+    & .hero-content {
+      text-shadow: none;
+    }
+    & .hero-nav {
+      filter: drop-shadow(0 0 0 $nightbg);
+    }
+    :not(.hero-content):not(h1):not(h2):not(.location):not(h3):not(i):not(footer):not(.social-icon):not(.hero-nav):not(a):not(li):not(ul):not(.menu):not(.hamburger-container):not(button):not(.mobilenav):not(.fa)
+    {
+      filter: hue-rotate(0) saturate(0.70) brightness(.8);
+
+
+      & .sun{
+        width: 15%;
+        padding: 8%;
+        top: 5%;
+        left: 30%;
+        background: $white;
+        transform: translatey(0);
+        // filter: drop-shadow(0 0 3vw $white);
+        // -webkit-filter: drop-shadow(0 0 3vw $white);
+      }
+
+    }
+  }
+  & .wrapper{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible;
+
+    & .painting{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      // background: $darksalmon;
+      overflow: hidden;
+      @media (max-width: 899px) {
+        max-height: 100vh;
+      }
+      @media (max-width: 500px){
+        max-height: 100vh;
+      }
+
+      & .mountain{
+        overflow: visible;
+        &.front.left{
+          top: 95%;
+          left: -20%;
+          width: 130%;
+          height: 70%;
+          background: $darkblue;
+          transform: rotate(13deg);
+          &:before, &:after{
+            display: block;
+            width: 60%;
+            height: 40%;
+            background: $darkblue;
+          }
+          &:before{
+            top: -5%;
+            left: -30%;
+            transform: rotate(8deg);
+          }
+          &:after{
+            top: -1%;
+            left: 55%;
+            transform: rotate(-10deg);
+          }
+
+          & .tree{
+            transform: rotate(-13deg);
+
+            &.tree1{
+              top: -9vw;
+              left: 15%;
+              @include tree(3vw, $darkblue);
+            }
+            &.tree2{
+              top: -8vw;
+              left: 30%;
+              @include tree(2.5vw, $darkblue);
+            }
+            &.tree3{
+              top: -6vw;
+              left: 45%;
+              @include tree(2vw, $darkblue);
+            }
+          }
+        }
+        &.front.right{
+          top: 80%;
+          left: 30%;
+          width: 120%;
+          height: 60%;
+          background: $midblue;
+          transform: rotate(-13deg);
+
+          & .tree{
+            transform: rotate(13deg);
+            &.tree1{
+              top: -8vw;
+              right: 40%;
+              @include tree(2.5vw, $midblue);
+            }
+            &.tree2{
+              top: -6vw;
+              right: 55%;
+              @include tree(2vw, $midblue);
+            }
+            &.tree3{
+              top: -4.5vw;
+              right: 70%;
+              @include tree(1.5vw, $midblue);
+            }
+          }
+
+        }
+        @media (max-width: 500px){
+
+          &.front.left{
+            top: 85%;
+            left: -30%;
+            width: 120%;
+            height: 60%;
+            & .tree{
+              &.tree1{
+                top: -6vw;
+                left: 25%;
+                @include tree(2vw, $darkblue);
+              }
+              &.tree2{
+                top: -5vw;
+                left: 40%;
+                @include tree(1.75vw, $darkblue);
+              }
+              &.tree3{
+                top: -4vw;
+                left: 55%;
+                @include tree(1.5vw, $darkblue);
+              }
+            }
+          }
+
+          &.front.right{
+            & .tree{
+              &.tree1{
+                top: -5.5vw;
+                right: 40%;
+                @include tree(1.75vw, $midblue);
+              }
+              &.tree2{
+                top: -5vw;
+                right: 55%;
+                @include tree(1.5vw, $midblue);
+              }
+              &.tree3{
+                top: -4vw;
+                right: 70%;
+                @include tree(1.25vw, $midblue);
+              }
+            }
+          }
+        }
+        &.mid{
+          top: 75%;
+          left: 0;
+          width: 100%;
+          height: 30%;
+          filter: drop-shadow(0 0 3vw $white);
+          -webkit-filter: drop-shadow(0 0 3vw $white);
+          & .peak{
+            background: linear-gradient(135deg, $aquablue 0%, $white 50%);
+            transform: rotate(45deg);
+            &.peak1{
+              top: 10%;
+              left:-10%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak2{
+              top: 0;
+              left: 30%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak3{
+              top: 20%;
+              left:-27%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak4{
+              top: 22%;
+              left: 52%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak5{
+              top: 12%;
+              left: 65%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak6{
+              top: 5%;
+              left: 15%;
+              width: 60%;
+              padding-top: 60%;
+            }
+          }
+        }
+
+        &.back{
+          top: 65%;
+          left: 0;
+          width: 100%;
+          height: 70%;
+
+          & .peak{
+            background: linear-gradient(45deg, $aquablue 50%, $white 50%);
+            transform: rotate(45deg);
+            &.peak1{
+              top: 25%;
+              left: -40%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak2{
+              top: 22%;
+              left: -30%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak3{
+              top: 15%;
+              left: -15%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak4{
+              top: 10%;
+              left:0%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak5{
+              top: 15%;
+              left:10%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak6{
+              top: 25%;
+              left: 25%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak7{
+              top: 30%;
+              left: 40%;
+              width: 100%;
+              padding-top: 100%;
+            }
+          }
+          @media (max-width: 500px){
+            &.mid{
+              top: 70%;
+            }
+
+            &.back{
+              top: 55%;
+            }
+          }
+          & .sun{
+            top: 8%;
+            @include horizontalcenter();
+            width: 70%;
+            padding-top: 70%;
+            border-radius: 50%;
+            background: $red;
+            // filter: drop-shadow(0 0 3vw $white);
+            // -webkit-filter: drop-shadow(0 0 3vw $white);
+          }
+          @media (max-width: 500px){
+            &.sun{
+              top: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// **************************ocean**********************
+
+
+body{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  // background: radial-gradient(ellipse at center, white 0%, $oceanbg 50%);
+
+  & .wrapper{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible;
+
+    & .nova{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: $oceanbg;
+      @media (max-width: 899px) {
+        max-height: 100vh;
+      }
+      @media (max-width: 500px){
+        max-height: 100vh;
+      }
+
+      & .hill{
+        overflow: visible;
+        &.front{
+          top: 92vh;
+          left: -20vw;
+          width: 100vw;
+          height: 60vw;
+          background: $midgreen;
+          transform: rotate(25deg);
+          &:before, &:after{
+            display: block;
+            width: 60vw;
+            height: 40vh;
+            background: $midgreen;
+          }
+          &:before{
+            top: -3vh;
+            left: -30vw;
+            transform: rotate(8deg);
+          }
+          &:after{
+            top: -1vh;
+            left: 55vw;
+            transform: rotate(-10deg);
+          }
+
+          & .tree{
+            transform: rotate(-25deg);
+            &.tree1{
+              top: -9vw;
+              left: 7vw;
+              @include tree(3vw, $midgreen);
+            }
+            &.tree2{
+              top: -8vw;
+              left: 17vw;
+              @include tree(2.5vw, $midgreen);
+            }
+            &.tree3{
+              top: -6vw;
+              left: 27vw;
+              @include tree(2vw, $midgreen);
+            }
+          }
+
+        }
+      }
+
+
+        & .hill{
+          overflow: visible;
+          &.back{
+            top: 82vh;
+            left: -30vw;
+            width: 100vw;
+            height: 60vw;
+            background: $darkgreen;
+            transform: rotate(30deg);
+            &:before, &:after{
+              display: block;
+              width: 60vw;
+              height: 40vh;
+              background: $darkgreen;
+            }
+            &:before{
+              top: -1vh;
+              left: -25vw;
+              transform: rotate(8deg);
+            }
+            &:after{
+              top: -1vh;
+              left: 55vw;
+              transform: rotate(-10deg);
+            }
+
+            & .tree{
+              transform: rotate(-30deg);
+              &.tree1{
+                top: -6vw;
+                left: 10vw;
+                @include tree(2vw, $darkgreen);
+              }
+              &.tree2{
+                top: -5vw;
+                left: 20vw;
+                @include tree(1.7vw, $darkgreen);
+              }
+              &.tree3{
+                top: -4vw;
+                left: 30vw;
+                @include tree(1.5vw, $darkgreen);
+              }
+            }
+
+          }
+
+      }
+      & .ocean{
+        overflow: visible;
+        &.back{
+          top: 70%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: $darkblue;
+        }
+      }
+      & .ocean{
+        overflow: visible;
+        &.mid{
+          top: 80%;
+          right: 0vw;
+          width: 95vw;
+          height: 80%;
+          background: $midblue;
+          filter: drop-shadow(0 0 3vw $midblue);
+          -webkit-filter: drop-shadow(0 0 3vw $midblue);
+
+          & .boat{
+            transform: rotate(0deg);
+            &.boat{
+              top: -3vw;
+              right: 10vw;
+              @include boat(1vw, $white);
+            }
+          }
+        }
+      }
+      & .ocean{
+        overflow: visible;
+        &.front{
+          top: 90%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: $aquablue;
+          filter: drop-shadow(0 0 3vw $aquablue);
+          -webkit-filter: drop-shadow(0 0 3vw $aquablue);
+
+        }
+      }
+
+      & .sun2{
+        top: 3%;
+        @include horizontalcenter();
+        width: 20%;
+        padding-top: 20%;
+        border-radius: 50%;
+        margin-left: 30vw;
+        background: $lightorange;
+        // filter: drop-shadow(0 0 3vw $lightorange);
+        // -webkit-filter: drop-shadow(0 0 3vw $lightorange);
+
+      }
+    }
+  }
+}
+// ************project page********************
+
+.project {
+  width: 100vw;
+  height: 67vw;
+}
+
+.split-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 49.5vw; height: 33.5vw;
+}
+.one {
+  position: relative;
+  left: -25.25vw;
+  .top {
+      background-color: $darkblue;
+  }
+  .bottom {
+      background-color: $aquablue;
+  }
+}
+.two  {
+  position: relative;
+  right: -25.25vw;
+  top: -33.5vw;
+  .top {
+      background-color: $midgreen;
+  }
+  .bottom {
+      background-color: $lightorange;
+  }
+}
+.three {
+  position: relative;
+  left: -25.25vw;
+  top: -32.5vw;
+  .top {
+      background-color: $midblue;
+  }
+  .bottom {
+      background-color: $berry;
+  }
+}
+.four {
+    position: relative;
+    right: -25.25vw;
+    top: -66vw;
+    .top {
+        background-color: $lightblue;
+    }
+    .bottom {
+        background-color: $darkgreen;
+    }
+}
+
+.split.right, .split.right img {
+  width: 100%;
+  height: 100%;
+}
+
+.split.right {
+  overflow: hidden;
+  position: absolute;
+  /* arctan(27 / 40) = 34.01935deg
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+
+}
+.split.right:first-child {
+  left: -1vw;
+  transform-origin: 100% 0;
+
+}
+.split.right:last-child {
+  right: -1vw;
+  transform-origin: 0 100%;
+}
+
+.split.right img, .split.right:after {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+.split.left, .split.left img {
+  width: 100%;
+  height: 100%;
+}
+.split.left {
+  overflow: hidden;
+  position: absolute;
+  /* arctan(27 / 40) = 34.01935deg
+   * need to skew by 1800deg - 34.01935deg = 145.98deg
+  */
+  transform: skewX(-123.98deg);
+
+}
+.split.left:first-child {
+
+  left: -1vw;
+  transform-origin: 0 100%;
+
+}
+.split.left:last-child {
+  right: -1vw;
+  transform-origin: 100% 0;
+
+}
+
+.split.left img, .split.left:after {
+  transform: skewX(123.98deg);
+  transform-origin: inherit;
+}
+.split img {
+  opacity: 0;
+  transition: .5s;
+}
+.split img:hover {
+  opacity: 1;
+}
+.split.right:after {
+  position: absolute;
+  margin: 20% 45%;
+  color: white;
+  font: 500 1.35em Courier;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-inf);
+}
+.split.right:first-child:after {
+  top: 0;
+  left: 0;
+}
+.split.right:last-child:after {
+  right: 0;
+  bottom: 0;
+}
+.split.left:after {
+  position: absolute;
+  margin: 20% 45%;
+  color: white;
+  font: 500 1.35em Courier;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-inf);
+}
+.split.left:first-child:after {
+  left: 0;
+  bottom: 0;
+
+}
+.split.left:last-child:after {
+  right: 0;
+  top: 0;
+}
+@media (max-width: 700px) {
+  .project {
+    width: 100%;
+    height: auto;
+  }
+  .split-container {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 99vw;
+    height: 66.7vw;
+    display: inline-block;
+  }
+  .split.right:after {
+    font: 500 1em Courier;
+  }
+  .split.left:after {
+    font: 500 1em Courier;
+  }
+  .one {
+    position: relative;
+    left: unset;
+  }
+  .two  {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset;
+  }
+  .three {
+    position: relative;
+    left: unset;
+    top: unset;
+  }
+  .four {
+      position: relative;
+      left: unset;
+      right: unset;
+      top: unset;
+  }
+
+
+}

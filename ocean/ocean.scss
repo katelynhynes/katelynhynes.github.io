@@ -1,0 +1,344 @@
+$white: rgba(255,255,255,1);
+$whiteo: rgba(255,255,255,0);
+$lightgrey: rgba(120, 120, 120, 1);
+$black: rgba(0,0,0,1);
+$morningbg: rgba(213,166,136,1);
+$noonbg: rgba(252,222,201,1);
+$oceanbg: rgba(130,189,230,1);
+$eveningbg: rgba(183,132,105,1);
+$nightbg: rgba(92,62,45,1);
+$lightsalmon: rgba(254,231,212,1);
+$darksalmon: rgba(252,222,201,1);
+$darksalmono: rgba(252,222,201,.5);
+$lightorange: rgba(238, 130, 130, .9);
+$aquablue: rgba(140,202,202,1);
+$lightblue: rgba(168,214,246,1);
+$midblue: rgba(8,91,144,1);
+$midblueo: rgba(8,91,144,.8);
+$darkblue: rgba(16,24,84,1);
+$red: rgba(243,83,102,1);
+$redo: rgba(243,83,102,.5);
+$berry: rgba(160,50,75,1);
+$midgreen: rgba(8,131,144, 1);
+$darkgreen:rgba(10, 98, 107, 1);
+
+@mixin horizontalcenter(){
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+@mixin verticalcenter(){
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+@mixin centercenter(){
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tree($p_height, $p_color){
+  width: 0;
+  height: 0;
+  margin-top: $p_height;
+  margin-left: $p_height / 4;
+  border-width: 0 $p_height*0.75 $p_height*2.5 $p_height*0.75;
+  border-style: solid;
+  border-color: transparent transparent $p_color transparent;
+  overflow: visible;
+  &:before, &:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent $p_color transparent;
+  }
+  &:before{
+    top: -$p_height*0.85;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.55 $p_height*2 $p_height*0.55;
+  }
+  &:after{
+    top: -$p_height*1.45;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.45 $p_height*1.5 $p_height*0.45;
+  }
+}
+
+@mixin hill($p_width){
+  @include horizontalcenter;
+  border-style: solid;
+  border-width: 0 $p_width*0.5 $p_width*0.86 $p_width*0.5;
+  border-color: transparent transparent #007bff transparent;
+}
+@mixin boat($p_height, $p_color){
+  width: $p_height*12;
+  height: $p_height*5;
+  margin-top: $p_height;
+  margin-left: $p_height / 4;
+  border-width:0 $p_height*.5 $p_height*4 $p_height*.5;
+  border-style: solid;
+  border-radius: $p_height;
+  border-color: transparent transparent $p_color transparent;
+  overflow: visible;
+
+  &:before{
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -$p_height*1.5;
+    border-style: solid;
+    border-color: transparent $p_color transparent transparent;
+    top: -$p_height*7;
+    @include horizontalcenter();
+    border-width: $p_height*5 $p_height*5 $p_height*2 0;
+  }
+  &:after{
+    display: block;
+    width: $p_height;
+    height: $p_height*11;
+    border-style: solid;
+    margin-left: $p_height*6;
+    border-color: transparent $p_color transparent transparent;
+    top: -$p_height*7;
+
+  }
+}
+.hero-nav {
+    display: inline-block;
+    position: absolute;
+    right: 5vw;
+    padding-top: 3%;
+    max-width: 50vw;
+    z-index: 1000;
+
+    a {
+        height: 66px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bolder;
+        transition: 0.3s ease;
+        color: $white;
+        text-decoration: none;
+        border-top: 4px transparent $white;
+        border-bottom: 4px transparent $white;
+        padding: 20px 0;
+        margin: 0 15px;
+
+    }
+    a:hover {
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        padding: 6px 0;
+    }
+  }
+  .info {
+    z-index: 100;
+    position: relative;
+    top: 10vh;
+    padding: 30px;
+  }
+
+div{
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+  }
+}
+
+body{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  // background: radial-gradient(ellipse at center, white 0%, $oceanbg 50%);
+
+  & .wrapper{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible;
+
+    & .nova{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: $oceanbg;
+      @media (max-width: 899px) {
+        max-height: 100vh;
+      }
+      @media (max-width: 500px){
+        max-height: 100vh;
+      }
+
+      & .hill{
+        overflow: visible;
+        &.front{
+          top: 92vh;
+          left: -20vw;
+          width: 100vw;
+          height: 60vw;
+          background: $midgreen;
+          transform: rotate(25deg);
+          &:before, &:after{
+            display: block;
+            width: 60vw;
+            height: 40vh;
+            background: $midgreen;
+          }
+          &:before{
+            top: -3vh;
+            left: -30vw;
+            transform: rotate(8deg);
+          }
+          &:after{
+            top: -1vh;
+            left: 55vw;
+            transform: rotate(-10deg);
+          }
+
+          & .tree{
+            transform: rotate(-25deg);
+            &.tree1{
+              top: -9vw;
+              left: 7vw;
+              @include tree(3vw, $midgreen);
+            }
+            &.tree2{
+              top: -8vw;
+              left: 17vw;
+              @include tree(2.5vw, $midgreen);
+            }
+            &.tree3{
+              top: -6vw;
+              left: 27vw;
+              @include tree(2vw, $midgreen);
+            }
+          }
+
+        }
+      }
+
+
+        & .hill{
+          overflow: visible;
+          &.back{
+            top: 82vh;
+            left: -30vw;
+            width: 100vw;
+            height: 60vw;
+            background: $darkgreen;
+            transform: rotate(30deg);
+            &:before, &:after{
+              display: block;
+              width: 60vw;
+              height: 40vh;
+              background: $darkgreen;
+            }
+            &:before{
+              top: -1vh;
+              left: -25vw;
+              transform: rotate(8deg);
+            }
+            &:after{
+              top: -1vh;
+              left: 55vw;
+              transform: rotate(-10deg);
+            }
+
+            & .tree{
+              transform: rotate(-30deg);
+              &.tree1{
+                top: -6vw;
+                left: 10vw;
+                @include tree(2vw, $darkgreen);
+              }
+              &.tree2{
+                top: -5vw;
+                left: 20vw;
+                @include tree(1.7vw, $darkgreen);
+              }
+              &.tree3{
+                top: -4vw;
+                left: 30vw;
+                @include tree(1.5vw, $darkgreen);
+              }
+            }
+
+          }
+
+      }
+      & .ocean{
+        overflow: visible;
+        &.back{
+          top: 70%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: $darkblue;
+        }
+      }
+      & .ocean{
+        overflow: visible;
+        &.mid{
+          top: 80%;
+          right: 0vw;
+          width: 95vw;
+          height: 80%;
+          background: $midblue;
+          filter: drop-shadow(0 0 3vw $midblue);
+
+          & .boat{
+            transform: rotate(0deg);
+            &.boat{
+              top: -3vw;
+              right: 10vw;
+              @include boat(1vw, $white);
+            }
+          }
+        }
+      }
+      & .ocean{
+        overflow: visible;
+        &.front{
+          top: 90%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: $aquablue;
+          filter: drop-shadow(0 0 3vw $aquablue);
+
+        }
+      }
+
+      & .sun2{
+        top: 3%;
+        @include horizontalcenter();
+        width: 20vw;
+        padding-top: 20%;
+        border-radius: 50%;
+        margin-left: 30vw;
+        background: $red;
+        filter: drop-shadow(0 0 3vw $lightorange);
+
+      }
+    }
+  }
+}

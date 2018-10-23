@@ -1,0 +1,1486 @@
+/* * * * * * * * * * * * * * * * * * * * *
+General
+* * * * * * * * * * * * * * * * * * * * */
+* {
+  box-sizing: border-box; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin: 10px 0; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Ubuntu', sans-serif; }
+
+/* * * * * * * * * * * * * * * * * * * * *
+Variables
+* * * * * * * * * * * * * * * * * * * * */
+/*****nav*****/
+.hero-nav {
+  display: inline-block;
+  position: absolute;
+  right: 5vw;
+  padding-top: 3%;
+  max-width: 50vw;
+  z-index: 1000;
+  filter: drop-shadow(0vw 0vw 1vw #f35366);
+  -webkit-filter: drop-shadow(0 0 1vw #f35366); }
+  .hero-nav a {
+    height: 66px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bolder;
+    transition: 0.3s ease;
+    color: white;
+    text-decoration: none;
+    border-top: 4px transparent white;
+    border-bottom: 4px transparent white;
+    padding: 20px 0;
+    margin: 0 15px; }
+  .hero-nav a:hover {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    padding: 6px 0; }
+  .hero-nav li {
+    display: inline-block; }
+
+.about .hero-nav {
+  filter: drop-shadow(0vw 0vw 1vw #82bde6);
+  -webkit-filter: drop-shadow(0 0 1vw #82bde6); }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Menu bar
+* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.menu {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: .2s;
+  transition-delay: .1s;
+  background: rgba(8, 91, 144, 0.8);
+  z-index: 1000;
+  border-top: none;
+  border-bottom: none; }
+
+.about .hero-nav .mobilenav a {
+  color: white; }
+
+.mobilenav a {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: .8em;
+  border-top: none;
+  border-bottom: none;
+  margin: 0; }
+.mobilenav a:hover {
+  border-top: none;
+  border-bottom: none;
+  padding: 20px; }
+.mobilenav ul {
+  padding-top: 10px; }
+.mobilenav li {
+  display: inline-block;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  width: 95%; }
+
+.open {
+  top: 0px;
+  margin: 0px;
+  opacity: 1; }
+
+.close {
+  top: -100vh;
+  right: 0px;
+  border: none;
+  opacity: 0; }
+
+.hamburger-container button {
+  border: none;
+  background: none;
+  text-shadow: 1px 1px 1px #787878; }
+
+/* * * * * * * * * * * * * * * * * * * * *
+Hero-text
+* * * * * * * * * * * * * * * * * * * * */
+.hero-content {
+  color: white;
+  font-size: 1.7em;
+  padding: 3%;
+  width: 50%;
+  position: relative;
+  text-shadow: 2px 2px 2px #787878;
+  font-weight: bold; }
+
+.location {
+  color: white;
+  font-size: 1.2em;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  position: absolute;
+  bottom: 0; }
+  .location a:visited {
+    color: rgba(238, 130, 130, 0.9); }
+
+/* * * * * * * * * * * * * * * * * * * * *
+about-text
+* * * * * * * * * * * * * * * * * * * * */
+.about-info {
+  color: white;
+  filter: drop-shadow(0 0 2vw #101854);
+  -webkit-filter: drop-shadow(0 0 2vw #101854);
+  width: 100%;
+  padding: 5%;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 10; }
+  .about-info h3 {
+    font-size: 2em; }
+  .about-info span {
+    font: 100% Consolas, Monaco, monospace;
+    padding-top: 10px;
+    display: inline-block;
+    font-size: 1.2em; }
+
+@-webkit-keyframes typing {
+  from {
+    width: 0; } }
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent; } }
+.about1 {
+  font: bold 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 10ch;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(10, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about2 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 12ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 2.8s steps(13, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about3 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 32ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 8.6s steps(31, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about4 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 17ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 3.2s steps(16, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about4 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 17ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 3.2s steps(16, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about5 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 3ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 0.4s steps(2, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about6 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 69ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 13.6s steps(68, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about7 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 19ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 3.6s steps(18, end), blink-caret 0.5s step-end infinite alternate; }
+
+.about8 {
+  font: 100% Consolas, Monaco, monospace;
+  border-right: .1em solid white;
+  width: 16.5em;
+  width: 50ch;
+  white-space: nowrap;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  -webkit-animation: typing 10s steps(49, end), blink-caret 0.5s step-end infinite alternate; }
+
+/* * * * * * * * * * * * * * * * * * * * *
+contact-text
+* * * * * * * * * * * * * * * * * * * * */
+.contact-page {
+  background: rgba(8, 91, 144, 0.8); }
+
+.contact div {
+  position: relative; }
+
+.contact h1 {
+  color: white;
+  padding: 1vw;
+  margin-left: 2vw;
+  position: relative;
+  top: -20vh; }
+
+.contact-form {
+  background: #a8d6f6;
+  position: relative;
+  top: 15vh;
+  width: 80vw;
+  height: 80%;
+  margin: 2vw 10vw;
+  border: 2px solid white; }
+
+.form-group {
+  position: relative;
+  top: -15vh; }
+
+.contact-form input, .contact-form textarea {
+  padding: 1vh 2vw;
+  background: rgba(238, 130, 130, 0.9);
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  margin-bottom: 1vh;
+  margin-left: 5vw;
+  width: 40vw;
+  display: inline; }
+
+.contact-form label {
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin-left: 5vw;
+  padding: 1vw;
+  position: relative; }
+
+.contact-form i {
+  padding-right: 5px; }
+
+.contact-form textarea {
+  width: 60vw;
+  height: 20vh;
+  resize: none;
+  display: inline; }
+
+.alert {
+  color: white;
+  padding: 1vw; }
+
+.text-danger {
+  color: rgba(238, 130, 130, 0.9);
+  padding: 1vw; }
+
+@media (max-width: 899px) {
+  .contact .row {
+    width: 94%;
+    margin: 0 3%; }
+
+  .contact-form input {
+    width: 50%; }
+
+  .contact-form textarea {
+    width: 70%; } }
+@media (max-width: 500px) {
+  .contact-form input {
+    width: 90%;
+    margin: 10px 4%; }
+
+  .contact-form textarea {
+    width: 90%;
+    margin: 10px 4%; } }
+@media (max-width: 899px) {
+  .hero-content {
+    width: 70%; }
+    .hero-content h1 {
+      font-size: 1.5em; }
+    .hero-content h2 {
+      font-size: 1em; }
+
+  .hamburger-container {
+    position: relative;
+    right: 20px; }
+
+  #close-mobile-menu-button {
+    position: relative;
+    left: 10px; }
+
+  .about-info {
+    width: 100%; }
+    .about-info h3 {
+      font-size: 1.3em; }
+    .about-info span {
+      font-size: .9em; }
+    .about-info .about4, .about-info .about2, .about-info .about3, .about-info .about5, .about-info .about6, .about-info .about7, .about-info .about8 {
+      top: 3px; } }
+@media (max-width: 500px) {
+  .hero-content {
+    width: 100%;
+    text-align: center; }
+    .hero-content h1 {
+      font-size: 1em;
+      margin-top: 70px;
+      margin-left: 10%;
+      margin-right: 10%; }
+    .hero-content h2 {
+      font-size: .8em;
+      margin-left: 10%;
+      margin-right: 10%; }
+
+  .location {
+    font-size: .8em; }
+
+  .fa {
+    font-size: 1.5em;
+    display: inline-block; }
+
+  .menu {
+    width: 100vw;
+    display: inline-block;
+    text-align: center; }
+
+  .hamburger-container {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center; }
+
+  .hero-nav nav {
+    display: inline-block;
+    text-align: center;
+    width: 100vw;
+    margin: 0; }
+
+  .mobilenav a {
+    text-align: center;
+    width: 85vw;
+    margin: 0; }
+  .mobilenav ul {
+    padding-top: 10px; }
+  .mobilenav li {
+    display: inline-block;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    width: 85vw; }
+
+  .open i {
+    margin: 0;
+    padding: 10px 0; }
+
+  .about-info {
+    width: 95%; }
+    .about-info h3 {
+      font-size: 1.2em; }
+    .about-info span {
+      font-size: .5em; }
+    .about-info .about4, .about-info .about2, .about-info .about3, .about-info .about5, .about-info .about6, .about-info .about7, .about-info .about8 {
+      top: 2px; } }
+footer {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 2%;
+  padding-right: 5%; }
+  footer li {
+    display: inline-block;
+    padding: 5px; }
+  footer .social-icon {
+    display: inline-block;
+    padding: 5%; }
+
+div {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  div:before, div:after {
+    content: '';
+    position: absolute;
+    display: none;
+    box-sizing: border-box; }
+
+body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+  body .sun {
+    top: 8%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 70%;
+    padding-top: 70%;
+    border-radius: 50%;
+    background: #f35366; }
+  body.morning {
+    background: #d5a688;
+    filter: saturate(0.5) brightness(0.9); }
+    body.morning .sun {
+      top: 30%;
+      left: -40%;
+      transform: translatey(0); }
+  body.noon {
+    background: #fcdec9;
+    filter: saturate(1) brightness(1); }
+  body.evening {
+    background: #b78469;
+    filter: saturate(0.65) brightness(0.9); }
+    body.evening .sun {
+      top: 15%;
+      left: 40%;
+      transform: translatey(0); }
+  body.night {
+    background: #29293e; }
+    body.night .hero-content {
+      text-shadow: none; }
+    body.night .hero-nav {
+      filter: drop-shadow(0 0 0 #29293e); }
+    body.night :not(.hero-content):not(h1):not(h2):not(.location):not(h3):not(i):not(footer):not(.social-icon):not(.hero-nav):not(a):not(li):not(ul):not(.menu):not(.hamburger-container):not(button):not(.mobilenav):not(.fa) {
+      filter: hue-rotate(0) saturate(0.7) brightness(0.8); }
+      body.night :not(.hero-content):not(h1):not(h2):not(.location):not(h3):not(i):not(footer):not(.social-icon):not(.hero-nav):not(a):not(li):not(ul):not(.menu):not(.hamburger-container):not(button):not(.mobilenav):not(.fa) .sun {
+        width: 15%;
+        padding: 8%;
+        top: 5%;
+        left: 30%;
+        background: white;
+        transform: translatey(0); }
+  body .wrapper {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible; }
+    body .wrapper .painting {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      @media (max-width: 899px) {
+        body .wrapper .painting {
+          max-height: 100vh; } }
+      @media (max-width: 500px) {
+        body .wrapper .painting {
+          max-height: 100vh; } }
+      body .wrapper .painting .mountain {
+        overflow: visible; }
+        body .wrapper .painting .mountain.front.left {
+          top: 95%;
+          left: -20%;
+          width: 130%;
+          height: 70%;
+          background: #101854;
+          transform: rotate(13deg); }
+          body .wrapper .painting .mountain.front.left:before, body .wrapper .painting .mountain.front.left:after {
+            display: block;
+            width: 60%;
+            height: 40%;
+            background: #101854; }
+          body .wrapper .painting .mountain.front.left:before {
+            top: -5%;
+            left: -30%;
+            transform: rotate(8deg); }
+          body .wrapper .painting .mountain.front.left:after {
+            top: -1%;
+            left: 55%;
+            transform: rotate(-10deg); }
+          body .wrapper .painting .mountain.front.left .tree {
+            transform: rotate(-13deg); }
+            body .wrapper .painting .mountain.front.left .tree.tree1 {
+              top: -9vw;
+              left: 15%;
+              width: 0;
+              height: 0;
+              margin-top: 3vw;
+              margin-left: 0.75vw;
+              border-width: 0 2.25vw 7.5vw 2.25vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:before, body .wrapper .painting .mountain.front.left .tree.tree1:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:before {
+                top: -2.55vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.65vw 6vw 1.65vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:after {
+                top: -4.35vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.35vw 4.5vw 1.35vw; }
+            body .wrapper .painting .mountain.front.left .tree.tree2 {
+              top: -8vw;
+              left: 30%;
+              width: 0;
+              height: 0;
+              margin-top: 2.5vw;
+              margin-left: 0.625vw;
+              border-width: 0 1.875vw 6.25vw 1.875vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:before, body .wrapper .painting .mountain.front.left .tree.tree2:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:before {
+                top: -2.125vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.375vw 5vw 1.375vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:after {
+                top: -3.625vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.125vw 3.75vw 1.125vw; }
+            body .wrapper .painting .mountain.front.left .tree.tree3 {
+              top: -6vw;
+              left: 45%;
+              width: 0;
+              height: 0;
+              margin-top: 2vw;
+              margin-left: 0.5vw;
+              border-width: 0 1.5vw 5vw 1.5vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:before, body .wrapper .painting .mountain.front.left .tree.tree3:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:before {
+                top: -1.7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.1vw 4vw 1.1vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:after {
+                top: -2.9vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9vw 3vw 0.9vw; }
+        body .wrapper .painting .mountain.front.right {
+          top: 80%;
+          left: 30%;
+          width: 120%;
+          height: 60%;
+          background: #085b90;
+          transform: rotate(-13deg); }
+          body .wrapper .painting .mountain.front.right .tree {
+            transform: rotate(13deg); }
+            body .wrapper .painting .mountain.front.right .tree.tree1 {
+              top: -8vw;
+              right: 40%;
+              width: 0;
+              height: 0;
+              margin-top: 2.5vw;
+              margin-left: 0.625vw;
+              border-width: 0 1.875vw 6.25vw 1.875vw;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.right .tree.tree1:before, body .wrapper .painting .mountain.front.right .tree.tree1:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #085b90 transparent; }
+              body .wrapper .painting .mountain.front.right .tree.tree1:before {
+                top: -2.125vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.375vw 5vw 1.375vw; }
+              body .wrapper .painting .mountain.front.right .tree.tree1:after {
+                top: -3.625vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.125vw 3.75vw 1.125vw; }
+            body .wrapper .painting .mountain.front.right .tree.tree2 {
+              top: -6vw;
+              right: 55%;
+              width: 0;
+              height: 0;
+              margin-top: 2vw;
+              margin-left: 0.5vw;
+              border-width: 0 1.5vw 5vw 1.5vw;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.right .tree.tree2:before, body .wrapper .painting .mountain.front.right .tree.tree2:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #085b90 transparent; }
+              body .wrapper .painting .mountain.front.right .tree.tree2:before {
+                top: -1.7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.1vw 4vw 1.1vw; }
+              body .wrapper .painting .mountain.front.right .tree.tree2:after {
+                top: -2.9vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9vw 3vw 0.9vw; }
+            body .wrapper .painting .mountain.front.right .tree.tree3 {
+              top: -4.5vw;
+              right: 70%;
+              width: 0;
+              height: 0;
+              margin-top: 1.5vw;
+              margin-left: 0.375vw;
+              border-width: 0 1.125vw 3.75vw 1.125vw;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.right .tree.tree3:before, body .wrapper .painting .mountain.front.right .tree.tree3:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #085b90 transparent; }
+              body .wrapper .painting .mountain.front.right .tree.tree3:before {
+                top: -1.275vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.825vw 3vw 0.825vw; }
+              body .wrapper .painting .mountain.front.right .tree.tree3:after {
+                top: -2.175vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.675vw 2.25vw 0.675vw; }
+        @media (max-width: 500px) {
+          body .wrapper .painting .mountain.front.left {
+            top: 85%;
+            left: -30%;
+            width: 120%;
+            height: 60%; }
+            body .wrapper .painting .mountain.front.left .tree.tree1 {
+              top: -6vw;
+              left: 25%;
+              width: 0;
+              height: 0;
+              margin-top: 2vw;
+              margin-left: 0.5vw;
+              border-width: 0 1.5vw 5vw 1.5vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:before, body .wrapper .painting .mountain.front.left .tree.tree1:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:before {
+                top: -1.7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.1vw 4vw 1.1vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree1:after {
+                top: -2.9vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9vw 3vw 0.9vw; }
+            body .wrapper .painting .mountain.front.left .tree.tree2 {
+              top: -5vw;
+              left: 40%;
+              width: 0;
+              height: 0;
+              margin-top: 1.75vw;
+              margin-left: 0.4375vw;
+              border-width: 0 1.3125vw 4.375vw 1.3125vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:before, body .wrapper .painting .mountain.front.left .tree.tree2:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:before {
+                top: -1.4875vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9625vw 3.5vw 0.9625vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree2:after {
+                top: -2.5375vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.7875vw 2.625vw 0.7875vw; }
+            body .wrapper .painting .mountain.front.left .tree.tree3 {
+              top: -4vw;
+              left: 55%;
+              width: 0;
+              height: 0;
+              margin-top: 1.5vw;
+              margin-left: 0.375vw;
+              border-width: 0 1.125vw 3.75vw 1.125vw;
+              border-style: solid;
+              border-color: transparent transparent #101854 transparent;
+              overflow: visible; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:before, body .wrapper .painting .mountain.front.left .tree.tree3:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #101854 transparent; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:before {
+                top: -1.275vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.825vw 3vw 0.825vw; }
+              body .wrapper .painting .mountain.front.left .tree.tree3:after {
+                top: -2.175vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.675vw 2.25vw 0.675vw; }
+          body .wrapper .painting .mountain.front.right .tree.tree1 {
+            top: -5.5vw;
+            right: 40%;
+            width: 0;
+            height: 0;
+            margin-top: 1.75vw;
+            margin-left: 0.4375vw;
+            border-width: 0 1.3125vw 4.375vw 1.3125vw;
+            border-style: solid;
+            border-color: transparent transparent #085b90 transparent;
+            overflow: visible; }
+            body .wrapper .painting .mountain.front.right .tree.tree1:before, body .wrapper .painting .mountain.front.right .tree.tree1:after {
+              display: block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent; }
+            body .wrapper .painting .mountain.front.right .tree.tree1:before {
+              top: -1.4875vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.9625vw 3.5vw 0.9625vw; }
+            body .wrapper .painting .mountain.front.right .tree.tree1:after {
+              top: -2.5375vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.7875vw 2.625vw 0.7875vw; }
+          body .wrapper .painting .mountain.front.right .tree.tree2 {
+            top: -5vw;
+            right: 55%;
+            width: 0;
+            height: 0;
+            margin-top: 1.5vw;
+            margin-left: 0.375vw;
+            border-width: 0 1.125vw 3.75vw 1.125vw;
+            border-style: solid;
+            border-color: transparent transparent #085b90 transparent;
+            overflow: visible; }
+            body .wrapper .painting .mountain.front.right .tree.tree2:before, body .wrapper .painting .mountain.front.right .tree.tree2:after {
+              display: block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent; }
+            body .wrapper .painting .mountain.front.right .tree.tree2:before {
+              top: -1.275vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.825vw 3vw 0.825vw; }
+            body .wrapper .painting .mountain.front.right .tree.tree2:after {
+              top: -2.175vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.675vw 2.25vw 0.675vw; }
+          body .wrapper .painting .mountain.front.right .tree.tree3 {
+            top: -4vw;
+            right: 70%;
+            width: 0;
+            height: 0;
+            margin-top: 1.25vw;
+            margin-left: 0.3125vw;
+            border-width: 0 0.9375vw 3.125vw 0.9375vw;
+            border-style: solid;
+            border-color: transparent transparent #085b90 transparent;
+            overflow: visible; }
+            body .wrapper .painting .mountain.front.right .tree.tree3:before, body .wrapper .painting .mountain.front.right .tree.tree3:after {
+              display: block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: transparent transparent #085b90 transparent; }
+            body .wrapper .painting .mountain.front.right .tree.tree3:before {
+              top: -1.0625vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.6875vw 2.5vw 0.6875vw; }
+            body .wrapper .painting .mountain.front.right .tree.tree3:after {
+              top: -1.8125vw;
+              left: 50%;
+              transform: translatex(-50%);
+              border-width: 0 0.5625vw 1.875vw 0.5625vw; } }
+        body .wrapper .painting .mountain.mid {
+          top: 75%;
+          left: 0;
+          width: 100%;
+          height: 30%;
+          filter: drop-shadow(0 0 3vw white);
+          -webkit-filter: drop-shadow(0 0 3vw white); }
+          body .wrapper .painting .mountain.mid .peak {
+            background: linear-gradient(135deg, #8ccaca 0%, white 50%);
+            transform: rotate(45deg); }
+            body .wrapper .painting .mountain.mid .peak.peak1 {
+              top: 10%;
+              left: -10%;
+              width: 60%;
+              padding-top: 60%; }
+            body .wrapper .painting .mountain.mid .peak.peak2 {
+              top: 0;
+              left: 30%;
+              width: 60%;
+              padding-top: 60%; }
+            body .wrapper .painting .mountain.mid .peak.peak3 {
+              top: 20%;
+              left: -27%;
+              width: 60%;
+              padding-top: 60%; }
+            body .wrapper .painting .mountain.mid .peak.peak4 {
+              top: 22%;
+              left: 52%;
+              width: 60%;
+              padding-top: 60%; }
+            body .wrapper .painting .mountain.mid .peak.peak5 {
+              top: 12%;
+              left: 65%;
+              width: 60%;
+              padding-top: 60%; }
+            body .wrapper .painting .mountain.mid .peak.peak6 {
+              top: 5%;
+              left: 15%;
+              width: 60%;
+              padding-top: 60%; }
+        body .wrapper .painting .mountain.back {
+          top: 65%;
+          left: 0;
+          width: 100%;
+          height: 70%; }
+          body .wrapper .painting .mountain.back .peak {
+            background: linear-gradient(45deg, #8ccaca 50%, white 50%);
+            transform: rotate(45deg); }
+            body .wrapper .painting .mountain.back .peak.peak1 {
+              top: 25%;
+              left: -40%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak2 {
+              top: 22%;
+              left: -30%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak3 {
+              top: 15%;
+              left: -15%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak4 {
+              top: 10%;
+              left: 0%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak5 {
+              top: 15%;
+              left: 10%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak6 {
+              top: 25%;
+              left: 25%;
+              width: 100%;
+              padding-top: 100%; }
+            body .wrapper .painting .mountain.back .peak.peak7 {
+              top: 30%;
+              left: 40%;
+              width: 100%;
+              padding-top: 100%; }
+          @media (max-width: 500px) {
+            body .wrapper .painting .mountain.back.mid {
+              top: 70%; }
+            body .wrapper .painting .mountain.back.back {
+              top: 55%; } }
+          body .wrapper .painting .mountain.back .sun {
+            top: 8%;
+            left: 50%;
+            transform: translatex(-50%);
+            width: 70%;
+            padding-top: 70%;
+            border-radius: 50%;
+            background: #f35366; }
+          @media (max-width: 500px) {
+            body .wrapper .painting .mountain.back.sun {
+              top: 10%; } }
+
+body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0; }
+  body .wrapper {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible; }
+    body .wrapper .nova {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #82bde6; }
+      @media (max-width: 899px) {
+        body .wrapper .nova {
+          max-height: 100vh; } }
+      @media (max-width: 500px) {
+        body .wrapper .nova {
+          max-height: 100vh; } }
+      body .wrapper .nova .hill {
+        overflow: visible; }
+        body .wrapper .nova .hill.front {
+          top: 92vh;
+          left: -20vw;
+          width: 100vw;
+          height: 60vw;
+          background: #088390;
+          transform: rotate(25deg); }
+          body .wrapper .nova .hill.front:before, body .wrapper .nova .hill.front:after {
+            display: block;
+            width: 60vw;
+            height: 40vh;
+            background: #088390; }
+          body .wrapper .nova .hill.front:before {
+            top: -3vh;
+            left: -30vw;
+            transform: rotate(8deg); }
+          body .wrapper .nova .hill.front:after {
+            top: -1vh;
+            left: 55vw;
+            transform: rotate(-10deg); }
+          body .wrapper .nova .hill.front .tree {
+            transform: rotate(-25deg); }
+            body .wrapper .nova .hill.front .tree.tree1 {
+              top: -9vw;
+              left: 7vw;
+              width: 0;
+              height: 0;
+              margin-top: 3vw;
+              margin-left: 0.75vw;
+              border-width: 0 2.25vw 7.5vw 2.25vw;
+              border-style: solid;
+              border-color: transparent transparent #088390 transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.front .tree.tree1:before, body .wrapper .nova .hill.front .tree.tree1:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #088390 transparent; }
+              body .wrapper .nova .hill.front .tree.tree1:before {
+                top: -2.55vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.65vw 6vw 1.65vw; }
+              body .wrapper .nova .hill.front .tree.tree1:after {
+                top: -4.35vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.35vw 4.5vw 1.35vw; }
+            body .wrapper .nova .hill.front .tree.tree2 {
+              top: -8vw;
+              left: 17vw;
+              width: 0;
+              height: 0;
+              margin-top: 2.5vw;
+              margin-left: 0.625vw;
+              border-width: 0 1.875vw 6.25vw 1.875vw;
+              border-style: solid;
+              border-color: transparent transparent #088390 transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.front .tree.tree2:before, body .wrapper .nova .hill.front .tree.tree2:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #088390 transparent; }
+              body .wrapper .nova .hill.front .tree.tree2:before {
+                top: -2.125vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.375vw 5vw 1.375vw; }
+              body .wrapper .nova .hill.front .tree.tree2:after {
+                top: -3.625vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.125vw 3.75vw 1.125vw; }
+            body .wrapper .nova .hill.front .tree.tree3 {
+              top: -6vw;
+              left: 27vw;
+              width: 0;
+              height: 0;
+              margin-top: 2vw;
+              margin-left: 0.5vw;
+              border-width: 0 1.5vw 5vw 1.5vw;
+              border-style: solid;
+              border-color: transparent transparent #088390 transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.front .tree.tree3:before, body .wrapper .nova .hill.front .tree.tree3:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #088390 transparent; }
+              body .wrapper .nova .hill.front .tree.tree3:before {
+                top: -1.7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.1vw 4vw 1.1vw; }
+              body .wrapper .nova .hill.front .tree.tree3:after {
+                top: -2.9vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9vw 3vw 0.9vw; }
+      body .wrapper .nova .hill {
+        overflow: visible; }
+        body .wrapper .nova .hill.back {
+          top: 82vh;
+          left: -30vw;
+          width: 100vw;
+          height: 60vw;
+          background: #0a626b;
+          transform: rotate(30deg); }
+          body .wrapper .nova .hill.back:before, body .wrapper .nova .hill.back:after {
+            display: block;
+            width: 60vw;
+            height: 40vh;
+            background: #0a626b; }
+          body .wrapper .nova .hill.back:before {
+            top: -1vh;
+            left: -25vw;
+            transform: rotate(8deg); }
+          body .wrapper .nova .hill.back:after {
+            top: -1vh;
+            left: 55vw;
+            transform: rotate(-10deg); }
+          body .wrapper .nova .hill.back .tree {
+            transform: rotate(-30deg); }
+            body .wrapper .nova .hill.back .tree.tree1 {
+              top: -6vw;
+              left: 10vw;
+              width: 0;
+              height: 0;
+              margin-top: 2vw;
+              margin-left: 0.5vw;
+              border-width: 0 1.5vw 5vw 1.5vw;
+              border-style: solid;
+              border-color: transparent transparent #0a626b transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.back .tree.tree1:before, body .wrapper .nova .hill.back .tree.tree1:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #0a626b transparent; }
+              body .wrapper .nova .hill.back .tree.tree1:before {
+                top: -1.7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 1.1vw 4vw 1.1vw; }
+              body .wrapper .nova .hill.back .tree.tree1:after {
+                top: -2.9vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.9vw 3vw 0.9vw; }
+            body .wrapper .nova .hill.back .tree.tree2 {
+              top: -5vw;
+              left: 20vw;
+              width: 0;
+              height: 0;
+              margin-top: 1.7vw;
+              margin-left: 0.425vw;
+              border-width: 0 1.275vw 4.25vw 1.275vw;
+              border-style: solid;
+              border-color: transparent transparent #0a626b transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.back .tree.tree2:before, body .wrapper .nova .hill.back .tree.tree2:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #0a626b transparent; }
+              body .wrapper .nova .hill.back .tree.tree2:before {
+                top: -1.445vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.935vw 3.4vw 0.935vw; }
+              body .wrapper .nova .hill.back .tree.tree2:after {
+                top: -2.465vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.765vw 2.55vw 0.765vw; }
+            body .wrapper .nova .hill.back .tree.tree3 {
+              top: -4vw;
+              left: 30vw;
+              width: 0;
+              height: 0;
+              margin-top: 1.5vw;
+              margin-left: 0.375vw;
+              border-width: 0 1.125vw 3.75vw 1.125vw;
+              border-style: solid;
+              border-color: transparent transparent #0a626b transparent;
+              overflow: visible; }
+              body .wrapper .nova .hill.back .tree.tree3:before, body .wrapper .nova .hill.back .tree.tree3:after {
+                display: block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: transparent transparent #0a626b transparent; }
+              body .wrapper .nova .hill.back .tree.tree3:before {
+                top: -1.275vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.825vw 3vw 0.825vw; }
+              body .wrapper .nova .hill.back .tree.tree3:after {
+                top: -2.175vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 0 0.675vw 2.25vw 0.675vw; }
+      body .wrapper .nova .ocean {
+        overflow: visible; }
+        body .wrapper .nova .ocean.back {
+          top: 70%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: #101854; }
+      body .wrapper .nova .ocean {
+        overflow: visible; }
+        body .wrapper .nova .ocean.mid {
+          top: 80%;
+          right: 0vw;
+          width: 95vw;
+          height: 80%;
+          background: #085b90;
+          filter: drop-shadow(0 0 3vw #085b90);
+          -webkit-filter: drop-shadow(0 0 3vw #085b90); }
+          body .wrapper .nova .ocean.mid .boat {
+            transform: rotate(0deg); }
+            body .wrapper .nova .ocean.mid .boat.boat {
+              top: -3vw;
+              right: 10vw;
+              width: 12vw;
+              height: 5vw;
+              margin-top: 1vw;
+              margin-left: 0.25vw;
+              border-width: 0 0.5vw 4vw 0.5vw;
+              border-style: solid;
+              border-radius: 1vw;
+              border-color: transparent transparent white transparent;
+              overflow: visible; }
+              body .wrapper .nova .ocean.mid .boat.boat:before {
+                display: block;
+                width: 0;
+                height: 0;
+                margin-left: -1.5vw;
+                border-style: solid;
+                border-color: transparent white transparent transparent;
+                top: -7vw;
+                left: 50%;
+                transform: translatex(-50%);
+                border-width: 5vw 5vw 2vw 0; }
+              body .wrapper .nova .ocean.mid .boat.boat:after {
+                display: block;
+                width: 1vw;
+                height: 11vw;
+                border-style: solid;
+                margin-left: 6vw;
+                border-color: transparent white transparent transparent;
+                top: -7vw; }
+      body .wrapper .nova .ocean {
+        overflow: visible; }
+        body .wrapper .nova .ocean.front {
+          top: 90%;
+          right: 0vw;
+          width: 100vw;
+          height: 80%;
+          background: #8ccaca;
+          filter: drop-shadow(0 0 3vw #8ccaca);
+          -webkit-filter: drop-shadow(0 0 3vw #8ccaca); }
+      body .wrapper .nova .sun2 {
+        top: 3%;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 20%;
+        padding-top: 20%;
+        border-radius: 50%;
+        margin-left: 30vw;
+        background: rgba(238, 130, 130, 0.9); }
+
+.project {
+  width: 100vw;
+  height: 67vw; }
+
+.split-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 49.5vw;
+  height: 33.5vw; }
+
+.one {
+  position: relative;
+  left: -25.25vw; }
+  .one .top {
+    background-color: #101854; }
+  .one .bottom {
+    background-color: #8ccaca; }
+
+.two {
+  position: relative;
+  right: -25.25vw;
+  top: -33.5vw; }
+  .two .top {
+    background-color: #088390; }
+  .two .bottom {
+    background-color: rgba(238, 130, 130, 0.9); }
+
+.three {
+  position: relative;
+  left: -25.25vw;
+  top: -32.5vw; }
+  .three .top {
+    background-color: #085b90; }
+  .three .bottom {
+    background-color: #a0324b; }
+
+.four {
+  position: relative;
+  right: -25.25vw;
+  top: -66vw; }
+  .four .top {
+    background-color: #a8d6f6; }
+  .four .bottom {
+    background-color: #0a626b; }
+
+.split.right, .split.right img {
+  width: 100%;
+  height: 100%; }
+
+.split.right {
+  overflow: hidden;
+  position: absolute;
+  /* arctan(27 / 40) = 34.01935deg
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg); }
+
+.split.right:first-child {
+  left: -1vw;
+  transform-origin: 100% 0; }
+
+.split.right:last-child {
+  right: -1vw;
+  transform-origin: 0 100%; }
+
+.split.right img, .split.right:after {
+  transform: skewX(55.98deg);
+  transform-origin: inherit; }
+
+.split.left, .split.left img {
+  width: 100%;
+  height: 100%; }
+
+.split.left {
+  overflow: hidden;
+  position: absolute;
+  /* arctan(27 / 40) = 34.01935deg
+   * need to skew by 1800deg - 34.01935deg = 145.98deg
+  */
+  transform: skewX(-123.98deg); }
+
+.split.left:first-child {
+  left: -1vw;
+  transform-origin: 0 100%; }
+
+.split.left:last-child {
+  right: -1vw;
+  transform-origin: 100% 0; }
+
+.split.left img, .split.left:after {
+  transform: skewX(123.98deg);
+  transform-origin: inherit; }
+
+.split img {
+  opacity: 0;
+  transition: .5s; }
+
+.split img:hover {
+  opacity: 1; }
+
+.split.right:after {
+  position: absolute;
+  margin: 20% 45%;
+  color: white;
+  font: 500 1.35em Courier;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-inf); }
+
+.split.right:first-child:after {
+  top: 0;
+  left: 0; }
+
+.split.right:last-child:after {
+  right: 0;
+  bottom: 0; }
+
+.split.left:after {
+  position: absolute;
+  margin: 20% 45%;
+  color: white;
+  font: 500 1.35em Courier;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-inf); }
+
+.split.left:first-child:after {
+  left: 0;
+  bottom: 0; }
+
+.split.left:last-child:after {
+  right: 0;
+  top: 0; }
+
+@media (max-width: 700px) {
+  .project {
+    width: 100%;
+    height: auto; }
+
+  .split-container {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 99vw;
+    height: 66.7vw;
+    display: inline-block; }
+
+  .split.right:after {
+    font: 500 1em Courier; }
+
+  .split.left:after {
+    font: 500 1em Courier; }
+
+  .one {
+    position: relative;
+    left: unset; }
+
+  .two {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset; }
+
+  .three {
+    position: relative;
+    left: unset;
+    top: unset; }
+
+  .four {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset; } }
+
+/*# sourceMappingURL=styles.css.map */

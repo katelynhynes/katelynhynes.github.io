@@ -1,0 +1,398 @@
+$white: rgba(255,255,255,1);
+$whiteo: rgba(255,255,255,0);
+$lightgrey: rgba(120, 120, 120, 1);
+$black: rgba(0,0,0,1);
+$morningbg: rgba(213,166,136,1);
+$noonbg: rgba(252,222,201,1);
+$oceanbg: rgba(130,189,230,1);
+$eveningbg: rgba(183,132,105,1);
+$nightbg: rgba(92,62,45,1);
+$lightsalmon: rgba(254,231,212,1);
+$darksalmon: rgba(252,222,201,1);
+$darksalmono: rgba(252,222,201,.5);
+$lightorange: rgba(238, 130, 130, .9);
+$aquablue: rgba(140,202,202,1);
+$lightblue: rgba(168,214,246,1);
+$midblue: rgba(8,91,144,1);
+$midblueo: rgba(8,91,144,.8);
+$darkblue: rgba(16,24,84,1);
+$red: rgba(243,83,102,1);
+$redo: rgba(243,83,102,.5);
+$berry: rgba(160,50,75,1);
+$midgreen: rgba(8,131,144, 1);
+$darkgreen:rgba(10, 98, 107, 1);
+
+@mixin horizontalcenter(){
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+@mixin verticalcenter(){
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+@mixin centercenter(){
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tree($p_height, $p_color){
+  width: 0;
+  height: 0;
+  margin-top: $p_height;
+  margin-left: $p_height / 4;
+  border-width: 0 $p_height*0.75 $p_height*2.5 $p_height*0.75;
+  border-style: solid;
+  border-color: transparent transparent $p_color transparent;
+  overflow: visible;
+  &:before, &:after{
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent $p_color transparent;
+  }
+  &:before{
+    top: -$p_height*0.85;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.55 $p_height*2 $p_height*0.55;
+  }
+  &:after{
+    top: -$p_height*1.45;
+    @include horizontalcenter();
+    border-width: 0 $p_height*0.45 $p_height*1.5 $p_height*0.45;
+  }
+}
+
+@mixin peak($p_width){
+  border-style: solid;
+  border-width: 0 $p_width*0.5 $p_width*0.86 $p_width*0.5;
+  border-color: transparent transparent #007bff transparent;
+}
+
+
+.hero-nav {
+    display: inline-block;
+    position: absolute;
+    right: 5vw;
+    padding-top: 3%;
+    max-width: 50vw;
+    z-index: 1000;
+
+    a {
+        height: 66px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bolder;
+        transition: 0.3s ease;
+        color: $white;
+        text-decoration: none;
+        border-top: 4px transparent $white;
+        border-bottom: 4px transparent $white;
+        padding: 20px 0;
+        margin: 0 15px;
+
+    }
+    a:hover {
+        border-top: 4px solid $white;
+        border-bottom: 4px solid $white;
+        padding: 6px 0;
+    }
+  }
+  .info {
+    z-index: 100;
+    position: relative;
+    top: 10vh;
+    padding: 30px;
+  }
+
+div{
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+  }
+}
+
+body{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  & .wrapper{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transform: translatey(-50%);
+    white-space: nowrap;
+    overflow: visible;
+
+    & .painting{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      @media (max-width: 899px) {
+        max-height: 100vh;
+      }
+      @media (max-width: 500px){
+        max-height: 100vh;
+      }
+
+      & .mountain{
+        overflow: visible;
+        &.front.left{
+          top: 95%;
+          left: -20%;
+          width: 130%;
+          height: 70%;
+          background: $darkblue;
+          transform: rotate(13deg);
+          &:before, &:after{
+            display: block;
+            width: 60%;
+            height: 40%;
+            background: $darkblue;
+          }
+          &:before{
+            top: -5%;
+            left: -30%;
+            transform: rotate(8deg);
+          }
+          &:after{
+            top: -1%;
+            left: 55%;
+            transform: rotate(-10deg);
+          }
+
+          & .tree{
+            transform: rotate(-13deg);
+            &.tree1{
+              top: -9vw;
+              left: 15%;
+              @include tree(3vw, $darkblue);
+            }
+            &.tree2{
+              top: -8vw;
+              left: 30%;
+              @include tree(2.5vw, $darkblue);
+            }
+            &.tree3{
+              top: -6vw;
+              left: 45%;
+              @include tree(2vw, $darkblue);
+            }
+          }
+
+        }
+        &.front.right{
+          top: 80%;
+          left: 30%;
+          width: 120%;
+          height: 60%;
+          background: $midblue;
+          transform: rotate(-13deg);
+
+          & .tree{
+            transform: rotate(13deg);
+            &.tree1{
+              top: -8vw;
+              right: 40%;
+              @include tree(2.5vw, $midblue);
+            }
+            &.tree2{
+              top: -6vw;
+              right: 55%;
+              @include tree(2vw, $midblue);
+            }
+            &.tree3{
+              top: -4.5vw;
+              right: 70%;
+              @include tree(1.5vw, $midblue);
+            }
+          }
+
+        }
+        &.mid{
+          top: 75%;
+          left: 0;
+          width: 100%;
+          height: 30%;
+          filter: drop-shadow(0 0 3vw $white);
+          & .peak{
+            background: linear-gradient(135deg, $aquablue 0%, $white 50%);
+            transform: rotate(45deg);
+            &.peak1{
+              top: 10%;
+              left:-10%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak2{
+              top: 0;
+              left: 30%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak3{
+              top: 20%;
+              left:-27%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak4{
+              top: 22%;
+              left: 52%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak5{
+              top: 12%;
+              left: 65%;
+              width: 60%;
+              padding-top: 60%;
+            }
+            &.peak6{
+              top: 5%;
+              left: 15%;
+              width: 60%;
+              padding-top: 60%;
+            }
+          }
+        }
+        &.back{
+          top: 65%;
+          left: 0;
+          width: 100%;
+          height: 70%;
+
+          & .peak{
+            background: linear-gradient(45deg, $aquablue 50%, $white 50%);
+            transform: rotate(45deg);
+            &.peak1{
+              top: 25%;
+              left: -40%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak2{
+              top: 22%;
+              left: -30%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak3{
+              top: 15%;
+              left: -15%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak4{
+              top: 10%;
+              left:0%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak5{
+              top: 15%;
+              left:10%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak6{
+              top: 25%;
+              left: 25%;
+              width: 100%;
+              padding-top: 100%;
+            }
+            &.peak7{
+              top: 30%;
+              left: 40%;
+              width: 100%;
+              padding-top: 100%;
+            }
+          }
+
+        }
+
+      }
+      & .sun{
+        top: 8%;
+        @include horizontalcenter();
+        width: 70%;
+        padding-top: 70%;
+        border-radius: 50%;
+        background: $red;
+        filter: drop-shadow(0 0 3vw $white);
+
+
+      }
+
+      &.morning{
+
+        background: $morningbg;
+        filter: saturate(0.5) brightness(0.8);
+
+        & .sun{
+          top: 30%;
+          left: -40%;
+          transform: translatey(0);
+        }
+      }
+
+      &.noon{
+
+        background: $noonbg;
+        filter: saturate(1) brightness(1);
+      }
+
+      &.evening{
+
+        background: $eveningbg;
+        filter: saturate(0.65) brightness(0.9);
+
+        & .sun{
+          top: 15%;
+          left: 40%;
+          transform: translatey(0);
+        }
+      }
+
+      &.night{
+
+        background: $nightbg;
+        filter: hue-rotate(0) saturate(0.15) brightness(0.25);
+
+        & .sun{
+          width: 12%;
+          height: 15%;
+          padding: 5%;
+          top: 5%;
+          left: 30%;
+          background: $white;
+          transform: translatey(0);
+          filter: drop-shadow(0 0 3vw $white);
+
+        }
+      }
+
+    }
+
+  }
+
+}
