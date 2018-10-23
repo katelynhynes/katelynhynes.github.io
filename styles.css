@@ -22,6 +22,10 @@ a {
 h1, h2, h3, h4, h5, p {
   font-family: 'Ubuntu', sans-serif; }
 
+.white-link, .white-link:hover, .white-link:visited, .white-link:active {
+  color: #fff;
+}
+
 /* * * * * * * * * * * * * * * * * * * * *
 Variables
 * * * * * * * * * * * * * * * * * * * * */
